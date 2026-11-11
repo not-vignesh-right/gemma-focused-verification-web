@@ -1,5 +1,12 @@
+// Fonts are bundled from npm (no build-time download from Google Fonts).
+import '@fontsource-variable/newsreader/opsz.css';
+import '@fontsource-variable/newsreader/opsz-italic.css';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/500.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
 import './globals.css';
-import { Newsreader, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import SmoothScroll from '../motion/SmoothScroll';
@@ -7,16 +14,6 @@ import Intro from '../motion/Intro';
 import PageTransition from '../motion/PageTransition';
 import Reveals from '../motion/Reveals';
 import { introGateScript } from '../motion/introGate';
-
-const serif = Newsreader({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  axes: ['opsz'],
-  variable: '--f-serif',
-  display: 'swap',
-});
-const sans = IBM_Plex_Sans({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--f-sans', display: 'swap' });
-const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--f-mono', display: 'swap' });
 
 export const metadata = {
   title: 'Focused candidate verification for CPU-only software issue localization',
@@ -28,7 +25,7 @@ export const viewport = { themeColor: '#f2efe6' };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: introGateScript }} />
       </head>
