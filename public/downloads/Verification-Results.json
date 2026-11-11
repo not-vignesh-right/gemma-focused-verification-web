@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "package_files_hashed": 5210,
+  "current_study_captured_outputs": {
+    "development": 480,
+    "evaluation": 786
+  },
+  "current_study_completed_receipts_replayed": {
+    "development": 12,
+    "evaluation": 19
+  },
+  "earlier_study_outputs": {
+    "development": 192,
+    "evaluation": 960
+  },
+  "earlier_study_receipts_checked": {
+    "development": 12,
+    "evaluation": 60
+  },
+  "earlier_study_exact_scores_recomputed": {
+    "A_plain_tournament": 11,
+    "B_semantic_tournament": 16,
+    "C_structural_tournament": 14,
+    "D_fielded_single": 12
+  },
+  "verification_scope": [
+    "Captured-record integrity and decision replay; no inference rerun.",
+    "Earlier-study scores recomputed from captured labels, not source/patch rebinding.",
+    "This check does not reproduce the complete current-study paper result."
+  ]
+}
