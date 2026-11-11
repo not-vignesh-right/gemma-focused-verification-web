@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap, SplitText, reduced } from '../../motion/gsap';
 import { afterIntro } from '../../motion/introGate';
 import { ArrowRight } from '../Icons';
+import { REPO_URL, REPO_LABEL } from '../../lib/links';
 import { ROWS, TASK, RUBRIC, splitSymbol, pad2 } from './shared';
 
 const STEP_MS = 1900;
@@ -182,6 +183,8 @@ export default function Hero() {
           <p className="hero__by" data-reveal-hero>
             Vignesh B S &middot; 11 November 2026 &middot;{' '}
             <a href="https://www.kaggle.com/competitions/gemma-4-developer-agent-paper">Kaggle Gemma 4 Developer Agent Paper</a>
+            <br />
+            Source and evidence: <a href={REPO_URL}>{REPO_LABEL}</a>
           </p>
         </div>
         <CallCard />

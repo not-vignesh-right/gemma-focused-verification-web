@@ -1,4 +1,5 @@
 import GzipDownload from '../../components/GzipDownload';
+import { REPO_URL, REPO_LABEL } from '../../lib/links';
 
 export const metadata = { title: 'Evidence and verification - Focused candidate verification' };
 
@@ -53,7 +54,9 @@ export default function Evidence() {
         supplied offline checker &mdash; no original inference script, model, benchmark repository or network request.
         Its actual output is quoted below. Alternatively, with
         the complete archive <code>gemma-submission-code-20261111.zip</code>, extract it entirely and run{' '}
-        <code>python verify_evidence.py</code> from its folder; both routes perform the same checks. The checker uses
+        <code>python verify_evidence.py</code> from its folder. Or clone the public repository{' '}
+        <a href={REPO_URL}>{REPO_LABEL}</a> and run <code>python tools/check_records.py</code> from its root. All
+        routes run the same offline checker. The checker uses
         only the standard library and performs no downloads, model loading, inference, training, API calls or
         benchmark execution. It checks:
       </p>

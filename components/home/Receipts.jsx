@@ -1,4 +1,5 @@
-import { ArrowRight } from '../Icons';
+import { ArrowRight, ArrowOut } from '../Icons';
+import { REPO_URL } from '../../lib/links';
 
 // Trust: the evidence package as a ledger with dotted leaders, then the invitation.
 const LINES = [
@@ -52,7 +53,10 @@ export default function Receipts() {
         <a className="btn btn--ink btn--lg" href="/evidence/">
           Run the evidence check <ArrowRight />
         </a>
-        <a className="btn btn--lg" href="/code/">
+        <a className="btn btn--lg" href={REPO_URL}>
+          Verify on GitHub <ArrowOut />
+        </a>
+        <a className="btn btn--quiet btn--lg" href="/code/">
           Browse the code
         </a>
         <a className="btn btn--quiet btn--lg" href="/results/">
